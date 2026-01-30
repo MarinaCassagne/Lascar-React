@@ -1,0 +1,99 @@
+.header {
+  background: linear-gradient(135deg, lightskyblue 0%, lightskyblue 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.header h1:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustement de la navbar pour qu'elle s'intègre dans le header */
+.header nav {
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.header nav ul {
+  gap: 1.5rem;
+}
+
+.header nav li {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.header nav li:hover {
+  color: #dbeafe;
+}
+
+/* Style des boutons Connexion et Inscription dans le header */
+.header nav li:nth-child(3) {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+}
+
+.header nav li:nth-child(3):hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.header nav li:nth-child(4) {
+  background-color: #ffffff;
+  color: lightskyblue;
+  border: 2px solid #ffffff;
+}
+
+.header nav li:nth-child(4):hover {
+  background-color: #f0f9ff;
+  color: lightskyblue;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .header nav li {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
