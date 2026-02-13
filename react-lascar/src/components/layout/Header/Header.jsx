@@ -1,4 +1,3 @@
-import NavBar from '../NavBar/NavBar';
 import './Header.css';
 
 export default function MyHeader() {
@@ -6,7 +5,6 @@ export default function MyHeader() {
     <header className="header">
       <div className="header-container">
         <h1>LAS'CAR</h1>
-        <NavBar />
       </div>
     </header>
   );
