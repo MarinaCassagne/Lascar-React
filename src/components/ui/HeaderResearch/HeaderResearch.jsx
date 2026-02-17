@@ -1,13 +1,13 @@
-import search from "../../../assets/IMG/Search_20dp_011267.png";
+import search from "../../../assets/IMG/search_45dp_011267.svg";
 import "./HeaderResearch.css";
 
 export default function HeaderResearch() {
   return (
     <>
-      <div className="header_research-box">
+      <a className="header_research-box" href="/">
         <img src={search} alt="Loupe" />
-        <h3>Rechercher</h3>
-      </div>
+        Rechercher
+      </a>
     </>
   );
 }

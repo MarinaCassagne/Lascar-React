@@ -9,7 +9,10 @@ export default function Header() {
     <>
       <div className="header-box">
         <Logo />
-        <HeaderResearch />
+        <div className="navbar-box">
+          <HeaderResearch />
+          <MenuIcon />
+        </div>
       </div>
     </>
   );
