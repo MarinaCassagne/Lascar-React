@@ -1,8 +1,9 @@
+
 .header-box {
-    background-color: #A9E1FF;
+    background-color: var(--color-second-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 5%;
+    padding: 1%;
 }
