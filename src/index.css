@@ -40,9 +40,53 @@ body {
   min-height: 100vh;
 }
 
+/* Headings */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1rem;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.875rem;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
+}
+
+/* Body text */
+.body {
+  font-size: 1.188rem;
+  font-family: "Inter",sans-serif;
+}
+
+.text-bold {
+  font-size: 1.188rem;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
+}
+
+.text-bold-lg {
+  font-size: 1.875rem;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
 }
 
 button {

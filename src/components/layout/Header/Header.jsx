@@ -1,34 +1,18 @@
-import './Header.css';
-import LOGO from '../../../assets/IMG/Logo.png';
+import "./Header.css";
 
-export default function MyHeader() {
+import HeaderResearch from "../../ui/HeaderResearch/HeaderResearch";
+import Logo from "../../ui/Logo/Logo";
+import MenuIcon from "../../ui/MenuIcon/MenuIcon";
+
+export default function Header() {
+
   return (
-    <header className="header">
-      <div className="header-container">
-        {/* Logo + titre */}
-        <div className="logo-title">
-          <img src={LOGO} alt="Logo Las'car" className="logo" />
-        </div>
-
-        {/* Barre de recherche */}
-        <div className="search-container">
-          <input
-            type="search"
-            placeholder="Rechercher"
-            className="search-input"
-            aria-label="Rechercher"
-          />
-          <button className="search-button" aria-label="Rechercher">
-            🔍
-          </button>
-        
-
-          {/* Bouton utilisateur */}
-          <button className="user-button" aria-label="Profil utilisateur">
-            👤
-          </button>
-        </div>
+    <>
+      <div className='header-box'>
+        <Logo/>
+        <HeaderResearch/>
+        <MenuIcon/>
       </div>
-    </header>
+    </>
   );
 }

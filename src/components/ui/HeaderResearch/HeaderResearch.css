@@ -1,0 +1,6 @@
+
+.header_research-box {
+    display: flex;
+    align-items: center;
+    gap: 6%;
+}
