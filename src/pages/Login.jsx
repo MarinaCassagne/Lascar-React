@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import Header from '../components/layout/Header/Header';
+// import Header from '../components/layout/Header/Header';
 import { useState } from 'react';
 import VOITURE from '../assets/IMG/Voiture.png';
 import Footer from '../components/layout/Footer/Footer';
@@ -38,8 +38,7 @@ export default function Login() {
 
   return (
     <>
-      <Header />
-
+      {/* <Header /> */}
       <div className="login-wrapper">
 
         {/* Image à gauche */}
