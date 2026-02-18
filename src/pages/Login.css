@@ -1,0 +1,188 @@
+
+/* ── Conteneur principal (entre Header et Footer) ── */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  min-height: calc(100vh - 130px);
+  padding: 40px 32px;
+  background: linear-gradient(160deg, #a9e1ff 0%, #b8dcf0 60%, #fff 100%);
+  animation: fadeIn 0.5s ease both;
+}
+
+/* ── Illustration gauche ── */
+.login-illustration {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 280px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px rgba(26, 43, 109, 0.12);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+.login-illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* ── Carte formulaire ── */
+.login-card {
+  background: rgba(255, 255, 255, 0.60);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(26, 43, 109, 0.12);
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 400px;
+  animation: slideUp 0.45s ease 0.1s both;
+}
+
+/* ── Titre ── */
+.login-card h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #1a2b6d;
+  margin: 0 0 32px 0;
+  letter-spacing: -0.5px;
+}
+
+/* ── Groupes champ ── */
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.login-field label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1a2b6d;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.login-field input {
+  background: #f0f7fc;
+  border: 1.5px solid #c5dff0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-family: 'Nunito', sans-serif;
+  color: #1a2b6d;
+  outline: none;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.login-field input::placeholder {
+  color: #9ab5cc;
+  font-weight: 400;
+}
+
+.login-field input:focus {
+  border-color: #1a2b6d;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(26, 43, 109, 0.12);
+}
+
+/* ── Lien inscription ── */
+.login-card p {
+  margin: 8px 0 28px 0;
+  font-size: 0.85rem;
+  color: #5577aa;
+}
+
+.login-card p a {
+  color: #1a6ec4;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.22s ease;
+}
+
+.login-card p a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1.5px;
+  background: #1a6ec4;
+  transition: width 0.22s ease;
+}
+
+.login-card p a:hover {
+  color: #1a2b6d;
+}
+
+.login-card p a:hover::after {
+  width: 100%;
+}
+
+/* ── Bouton Se connecter ── */
+.login-btn {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  background: #1a2b6d;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 14px rgba(26, 43, 109, 0.30);
+}
+
+.login-btn:hover {
+  background: #253a8e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 43, 109, 0.38);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(26, 43, 109, 0.25);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    gap: 32px;
+    padding: 28px 16px;
+  }
+
+  .login-illustration {
+    width: 200px;
+    height: 200px;
+  }
+
+  .login-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-illustration {
+    display: none;
+  }
+
+  .login-card h1 {
+    font-size: 1.6rem;
+  }
+}
