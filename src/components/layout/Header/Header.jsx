@@ -7,13 +7,13 @@ import MenuIcon from "../../ui/MenuIcon/MenuIcon";
 export default function Header() {
   return (
     <>
-      <div className="header-box">
+      <header>
         <Logo />
-        <div className="navbar-box">
+        <div className="navbar">
           <HeaderResearch />
           <MenuIcon />
         </div>
-      </div>
+      </header>
     </>
   );
 }

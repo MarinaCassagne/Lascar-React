@@ -4,7 +4,7 @@ import "./HeaderResearch.css";
 export default function HeaderResearch() {
   return (
     <>
-      <a className="header_research-box" href="/">
+      <a className="header_research" href="/">
         <img src={search} alt="Loupe" />
         Rechercher
       </a>

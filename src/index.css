@@ -11,7 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background:var(--color-gradient);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* Background-color */
+  --color-gradient: linear-gradient(#A9E1FF, #FFFFFF);
   --color-primary-bg: #FFFFFF;
   --color-primary-bg-opacity: rgba(255, 255, 255, 0.5);
   --color-second-bg: #A9E1FF;

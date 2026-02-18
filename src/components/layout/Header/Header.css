@@ -1,5 +1,5 @@
 
-.header-box {
+header {
     background-color: var(--color-second-bg);
     display: flex;
     justify-content: space-between;
@@ -8,7 +8,7 @@
     padding: 2%;
 }
 
-.navbar-box {
+.navbar {
     width: inherit;
     display: flex;
     justify-content: end;
