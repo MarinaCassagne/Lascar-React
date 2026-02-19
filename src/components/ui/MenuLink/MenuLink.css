@@ -1,0 +1,24 @@
+.menu_link {
+  font-size: 1.25vw;
+  height:auto;
+  display: flex;
+  justify-items: left;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary-bg);
+  border-radius: 8px;
+  gap:35px;
+}
+
+
+.menu_link :hover {
+  background-color: var(--color-second-bg);
+  border-radius: 8px;
+}
+
+.menu_link img {
+  height: 1em;
+  vertical-align: middle;
+  transform: rotate(-90deg);
+}
