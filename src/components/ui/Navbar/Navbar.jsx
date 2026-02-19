@@ -6,12 +6,15 @@ import MenuPanel from "../MenuPanel/MenuPanel";
 import { useState } from "react";
 
 export default function Navbar() {
-  // Définir une variable permettant de dire, si le menu est ouvert ou fermé.
-  // Si le menu est ouvert, alors on définit la variable isMenuOpen a 'true'.
-  // Si le menu est fermé, alors on définit la variable isMenuOpen a 'false'.
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // Lorsqu'on évoque la fonction Click alors on fait passer la variable isMenuOpen de false à true.
-
+    
+  /**
+   * Change le statut de la variable isMenuOpen : true <-> false
+   * @example 
+   * // Au clic sur un composant 
+   * onClick={ToggleMenu}
+   */
   function ToggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
