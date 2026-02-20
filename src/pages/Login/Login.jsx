@@ -33,7 +33,7 @@ export default function Login() {
       // Si la réponse est ok (200) alors je stock le token dans mon localstorage
       if(response.ok){
         console.log('Login Réussi:', data);
-        localStorage.setItem('Token', data['token']);
+        localStorage.setItem('   ', data['token']);
         navigate("/");
       // Sinon erreur de connexion
       }else{
@@ -44,7 +44,7 @@ export default function Login() {
     }
 
   };
-
+  
   return (
     <>
         <Header />
