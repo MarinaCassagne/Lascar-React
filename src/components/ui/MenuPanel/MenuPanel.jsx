@@ -3,7 +3,6 @@ import MenuLink from "../MenuLink/MenuLink";
 import { useState } from "react";
 
 export default function MenuPanel({ isMenuOpen }) {
-  
   //Menu Visiteur
   const VisitorMenu = [
     { label: "S'inscrire", path: "/register" },

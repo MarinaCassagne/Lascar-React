@@ -1,6 +1,6 @@
 header {
     background-color: var(--color-second-bg);
-    box-shadow: 0px 4px 10px var(--color-third-bg-opacity);
+    box-shadow: 0px 4px 4px var(--color-third-bg-opacity);
     display: flex;
     justify-content: space-between;
     align-items: center;

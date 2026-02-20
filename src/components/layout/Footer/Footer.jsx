@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="social-links">
-          <img src="../../../assets/IMG/Twitter.png" alt="Logo-Twitter"/>
+          {/* <img src="../../../assets/IMG/twitter_45dp_011267.svg" alt="Logo-Twitter"/> */}
         </div>
         <div className="copyright">
           <p>&copy; {new Date().getFullYear()} Tous droits réservés</p>
