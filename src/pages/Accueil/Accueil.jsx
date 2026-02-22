@@ -3,6 +3,7 @@ import { useEffect , useState} from 'react';
 import './Accueil.css';
 import LOGO from '../../assets/IMG/logo.svg'
 import Footer from '../../components/layout/Footer/Footer';
+import api from '../../api/axiosInstance';
 
 
 export default function Accueil() {
@@ -12,14 +13,12 @@ export default function Accueil() {
   useEffect(()=>{
     async function listTrajet() {
       try{
-        const response = await fetch('http://localhost:8000/api/trajets?limit=4', {
-              method: 'GET',
-              headers: { 'Content-Type': 'application/json'},
-            });
         
-        const data = await response.json();
+        // Il faut utiliser {} autour de data pour récupérer uniquement le body de la réponse
+        // Sinon Axios récupère tout un objet reponse
+        const {data} = await api.get('/api/trajets');
 
-        if (response.ok) {
+        if (data) {
           console.log('Liste des trajets', data);
           setTrajets(data);
         } else {

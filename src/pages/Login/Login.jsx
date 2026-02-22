@@ -4,33 +4,37 @@ import { useState } from 'react';
 import VOITURE from '../../assets/IMG/Voiture.png';
 import Footer from '../../components/layout/Footer/Footer';
 import './Login.css';
+// On importe notre instance Axios centralisée
+import api from '../../api/axiosInstance';
+// On importe le store Zustand pour stocker les tokens
+import useAuthStore from '../../store/authStore';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  // On récupère les fonctions du store Zustand
+  const { setTokens, setUser } = useAuthStore();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: email,
-          mot_de_passe: password,
-        }),
+
+      const {data} = await api.post('/api/login',{
+        email: email,
+        mot_de_passe: password,
       });
 
-      const data = await response.json();
+      console.log('Data reçue:', data);
+      // On stocke les tokens dans Zustand
+      // token sans le "Bearer " car l'intercepteur l'ajoute automatiquement
+      setTokens(data.token, data.refresh_token);
 
-      if (response.ok) {
-        console.log('Login Réussi:', data);
-        localStorage.setItem('Token', data['token']);
-        navigate('/');
-      } else {
-        console.error('Erreur de login', data.message);
-      }
+      // On stocke les infos utilisateur dans Zustand
+      setUser(data.user);
+
+      navigate('/');
     } catch (error) {
       console.error('Erreur réseau:', error);
     }
