@@ -24,7 +24,7 @@
   --color-primary-bg-opacity: rgba(255, 255, 255, 0.5);
   --color-second-bg: #A9E1FF;
   --color-third-bg: #011267;
-  --color-third-bg-opacity: rgba(1, 18, 103, 0.8);
+  --color-third-bg-opacity: rgba(1, 14, 82, 0.8);
   --color-fourth-bg: #E3C892;
   --color-fifth-bg: #767676;
   --color-sixth-bg: #9CF3A3;
@@ -110,17 +110,35 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-third-bg);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: var(--color-third-bg-opacity);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+form {
+display: block;
+}
+
+label {
+  color: var(--color-primary-text);
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+input {
+  background-color: var(--color-primary-bg);
+  border-radius: 8px;
+  border-color: #D9D9D9;
+  padding: 12px 16px;
+  width: 251px;
 }
 
 @media (prefers-color-scheme: light) {
