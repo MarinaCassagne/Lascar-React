@@ -1,0 +1,13 @@
+.header_research {
+  height:auto;
+  font-size: 1.25vw;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header_research img {
+  height:1em;
+  width:auto;
+
+}

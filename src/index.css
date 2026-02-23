@@ -4,33 +4,49 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-primary-text);
+  background: var(--color-gradient);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Background-color */
+  --color-gradient: linear-gradient(#A9E1FF,#F5F7FA);
+  --color-primary-bg: #F5F7FA;
+  --color-primary-bg-opacity: rgba(255, 255, 255, 0.5);
+  --color-second-bg: #A9E1FF;
+  --color-third-bg: #011267;
+  --color-third-bg-opacity: rgba(1, 14, 82, 0.8);
+  --color-fourth-bg: #E3C892;
+  --color-fifth-bg: #767676;
+  --color-sixth-bg: #9CF3A3;
+  --color-popup-bg: #235CCF;
+
+  /* Text color */
+  --color-primary-text: #011267;
+  --color-primary-text-opacity: #010E52;
+  --color-second-text: #F5F7FA;
+  --color-third-text: #011267;
+  --color-fourth-text: #21BE2E;
+  --color-fifth-text: #FF0909;
+
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-primary-text);
   text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--color-primary-text-opacity);
 }
 
 body {
@@ -40,9 +56,51 @@ body {
   min-height: 100vh;
 }
 
+/* Typography */
+/* Headings */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: var(--color-primary-text);
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--color-primary-text);
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+h3 {
+  color: var(--color-primary-text);
+  font-size: 1.25vw;
+  font-weight: bold;
+}
+
+h4 {
+  color: var(--color-primary-text);
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+h5 {
+  color: var(--color-primary-text);
+  font-size: 0.875vw;
+  font-weight: bold;
+}
+
+/* Body text */
+.body {
+  font-size: 1.188rem;
+}
+
+.text-bold {
+  font-size: 1.188rem;
+  font-weight: bold;
+}
+
+.text-bold-lg {
+  font-size: 1.875rem;
+  font-weight: bold;
 }
 
 button {
@@ -52,16 +110,36 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-third-bg);
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: var(--color-third-bg-opacity);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+form {
+display: flex;
+
+}
+
+label {
+  color: var(--color-primary-text);
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+input {
+  background-color: var(--color-primary-bg);
+  border-radius: 8px;
+  border-color: #D9D9D9;
+  padding: 12px 16px;
+  width: 251px;
 }
 
 @media (prefers-color-scheme: light) {

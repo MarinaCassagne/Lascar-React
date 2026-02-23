@@ -1,0 +1,16 @@
+.menu_icon {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px;
+}
+.menu_icon img {
+  height: 45px;
+}
+
+.menu_icon-close {
+  transform: rotate(180deg);
+}
+
