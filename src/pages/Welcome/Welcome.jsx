@@ -1,12 +1,12 @@
+import Header from '../../components/layout/Header/Header';
 import { useEffect , useState} from 'react';
-// import Header from '../components/layout/Header/Header'
 import './Accueil.css';
 import LOGO from '../../assets/IMG/logo.svg'
 import Footer from '../../components/layout/Footer/Footer';
 import api from '../../api/axiosInstance';
 
 
-export default function Accueil() {
+export default function Home() {
 
   const [trajets, setTrajets] = useState([]);
 
@@ -40,6 +40,7 @@ export default function Accueil() {
 
   return (
     <>
+    <Header />  
       {/* // <Header />   */}
       <section className="presentation">
         <h1>Las'Car - Plateforme de covoiturage</h1>
