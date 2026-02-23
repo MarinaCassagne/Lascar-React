@@ -1,6 +1,6 @@
 import Header from '../../components/layout/Header/Header';
 import { useEffect , useState} from 'react';
-import './Accueil.css';
+import './Home.css';
 import LOGO from '../../assets/IMG/logo.svg'
 import Footer from '../../components/layout/Footer/Footer';
 import api from '../../api/axiosInstance';
