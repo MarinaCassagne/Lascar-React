@@ -5,6 +5,7 @@
   position:fixed;
   bottom: 0px;
   width: 100%;
+  position: relative;
 }
 
 .footer-content {
@@ -12,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 
 .social-links {
   display: flex;
@@ -34,11 +36,6 @@
 
 .social-links a:hover {
   background-color: #2d5a8a;
-}
-
-.social-links svg {
-  width: 20px;
-  height: 20px;
 }
 
 .copyright p {

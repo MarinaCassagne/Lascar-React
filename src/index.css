@@ -37,7 +37,6 @@
   --color-third-text: #011267;
   --color-fourth-text: #21BE2E;
   --color-fifth-text: #FF0909;
-
 }
 
 a {
@@ -50,8 +49,6 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -121,11 +118,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-form {
-display: flex;
-
 }
 
 label {
