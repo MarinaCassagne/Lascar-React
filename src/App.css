@@ -1,3 +1,11 @@
 .wrapper {
     padding: 20px;
 }
+
+/* ── Corps de la page ── */
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #c8e6f5;
+  min-height: 100vh;
+  margin: 0;
+}
