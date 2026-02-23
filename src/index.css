@@ -124,7 +124,8 @@ button:focus-visible {
 }
 
 form {
-display: block;
+display: flex;
+
 }
 
 label {
