@@ -29,6 +29,7 @@ const useAuthStore = create(
       // partialize contrôle CE QUI est sauvegardé dans le localStorage
       // Tout ce qui n'est pas listé ici reste uniquement en mémoire
       partialize: (state) => ({
+        accessToken: state.accessToken,
         // On persiste le refresh token car il doit survivre à la fermeture de l'onglet
         refreshToken: state.refreshToken,
         // On persiste le user pour afficher ses infos sans refaire une requête API

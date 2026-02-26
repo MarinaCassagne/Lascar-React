@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Research from './pages/Research/Research';
 import Publish from './pages/Publish/Publish';
+import PublishDriver from './pages/PublishDriver/PublishDriver';
 
 function App() {
   return (

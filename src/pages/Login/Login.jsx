@@ -28,7 +28,6 @@ export default function Login() {
 
       console.log('Data reçue:', data);
       // On stocke les tokens dans Zustand
-      // token sans le "Bearer " car l'intercepteur l'ajoute automatiquement
       setTokens(data.token, data.refresh_token);
 
       // On stocke les infos utilisateur dans Zustand
