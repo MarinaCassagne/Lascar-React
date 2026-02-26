@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-    <Header />  
+    <Header />
       {/* // <Header />   */}
       <section className="presentation">
         <h1>Las'Car - Plateforme de covoiturage</h1>

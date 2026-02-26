@@ -1,4 +1,4 @@
-import './footer.css';
+import './Footer.css';
 import Twitter from '../../../assets/IMG/twitter_45dp_011267.svg';
 import Instagram from '../../../assets/IMG/instagram_45dp_011267.svg';
 import Facebook from '../../../assets/IMG/facebook_45dp_011267.svg';

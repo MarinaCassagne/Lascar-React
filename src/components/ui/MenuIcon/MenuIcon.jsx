@@ -1,5 +1,5 @@
 import "./MenuIcon.css";
-import iconPerson from "../../../assets/IMG/iconPerson_45dp_E3C892_011267.svg";
+import iconPerson from "../../../assets/IMG/IconPerson_45dp_E3C892_011267.svg";
 import arrowVisitorDown from "../../../assets/IMG/arrowDown_45dp_E3C892_011267.svg";
 
 export default function MenuIcon({ isMenuOpen,ToggleMenu}) {
