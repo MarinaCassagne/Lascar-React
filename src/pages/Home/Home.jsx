@@ -16,7 +16,7 @@ export default function Home() {
         
         // Il faut utiliser {} autour de data pour récupérer uniquement le body de la réponse
         // Sinon Axios récupère tout un objet reponse
-        const { data }  = await api.get('/api/trajets');
+        const { data }  = await api.get('/api/trajets?limit=4');
 
         if (data) {
           console.log('Liste des trajets', data);
