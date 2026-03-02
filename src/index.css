@@ -120,13 +120,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+form {
+  display:inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 label {
+  display:inline-flex;
+  flex-direction: column;
   color: var(--color-primary-text);
   font-size: 1.5vw;
   font-weight: bold;
 }
 
 input {
+  color: var(--color-primary-text);
   background-color: var(--color-primary-bg);
   border-radius: 8px;
   border-color: #D9D9D9;
