@@ -38,6 +38,12 @@ body:has(.publish-btn) form h3:first-child {
   margin-top: 0;
 }
 
+/* Calendrier input Date */
+body:has(.publish-btn) form input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(1) saturate(15) hue-rotate(210deg) brightness(0.23);
+  cursor: pointer;
+}
+
 /* ── Boutons radio ── */
 body:has(.publish-btn) form input[type="radio"] {
   display: inline-block;
