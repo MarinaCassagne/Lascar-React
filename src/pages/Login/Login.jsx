@@ -79,7 +79,7 @@ export default function Login() {
             </div>
 
             <p>
-              <Link to="/inscription">Pas encore membre ? Inscrivez-vous</Link>
+              <Link to="/register">Pas encore membre ? Inscrivez-vous</Link>
             </p>
 
             <button type="submit" className="login-btn">

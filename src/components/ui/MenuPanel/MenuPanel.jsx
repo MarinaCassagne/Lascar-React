@@ -12,8 +12,10 @@ export default function MenuPanel({ isMenuOpen,isConnected }) {
   //Menu Membre (Passager | Conducteur)
   const MemberMenu = [
     { label: "Espace membre", path: "/" },
+    { label: "Proposer un trajet", path: "/publish" },
     { label: "Planning de mes trajets", path: "/" },
     { label: "Mon solde", path: "/" },
+    { label: "Mon profil", path: "/" },
     { label: "Mes paramètres", path: "/" },
     { label: "Se déconnecter", path: "/" },
   ];
