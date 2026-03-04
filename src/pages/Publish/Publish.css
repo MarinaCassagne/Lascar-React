@@ -1,0 +1,70 @@
+/* ── Fond de page ── */
+body:has(a[href="/publish/driver"]) {
+  background-color: #b8ddf5;
+}
+
+/* ── Titre de la page ── */
+body:has(a[href="/publish/driver"]) h2 {
+  display: block;
+  width: min(92%, 480px);
+  margin: 48px auto 12px;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #011267;
+  letter-spacing: -0.3px;
+}
+
+/* ── Sous-titre ── */
+body:has(a[href="/publish/driver"]) p {
+  display: block;
+  width: min(92%, 480px);
+  margin: 0 auto 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #011267;
+}
+
+/* ── Liens (wrappent les boutons) ── */
+body:has(a[href="/publish/driver"]) a {
+  display: block;
+  width: min(92%, 480px);
+  margin: 0 auto 12px;
+  text-decoration: none;
+}
+
+/* ── Boutons ── */
+body:has(a[href="/publish/driver"]) button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #011267;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 14px rgba(1, 18, 103, 0.28);
+}
+
+body:has(a[href="/publish/driver"]) button:hover {
+  background: #021a8c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(1, 18, 103, 0.36);
+}
+
+body:has(a[href="/publish/driver"]) button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(1, 18, 103, 0.22);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body:has(a[href="/publish/driver"]) h2 {
+    margin: 32px auto 10px;
+    font-size: 1.4rem;
+  }
+}
