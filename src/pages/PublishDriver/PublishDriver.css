@@ -1,0 +1,139 @@
+/* ── Titre de la page ── */
+body:has(.publish-btn) h1 {
+  display: block;
+  width: min(90%, 560px);
+  margin: 36px auto 20px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #011267;
+  letter-spacing: -0.3px;
+}
+
+/* ── Carte formulaire ── */
+body:has(.publish-btn) form {
+  display: block;
+  width: min(90%, 560px);
+  margin: 0 auto 60px;
+  padding: 32px 36px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.80);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(1, 18, 103, 0.12);
+}
+
+/* ── En-têtes de section ── */
+body:has(.publish-btn) form h3 {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #011267;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 22px 0 8px;
+}
+
+body:has(.publish-btn) form h3:first-child {
+  margin-top: 0;
+}
+
+/* ── Boutons radio ── */
+body:has(.publish-btn) form input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin-right: 8px;
+  accent-color: #011267;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* ── Labels (radio) ── */
+body:has(.publish-btn) form label {
+  display: inline;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #011267;
+  vertical-align: middle;
+  line-height: 2;
+}
+
+/* ── Champs texte / date / nombre ── */
+body:has(.publish-btn) form input[type="text"],
+body:has(.publish-btn) form input[type="datetime-local"],
+body:has(.publish-btn) form input[type="number"] {
+  display: block;
+  width: 100%;
+  background: #f0f7fc;
+  border: 1.5px solid #c5dff0;
+  border-radius: 12px;
+  padding: 11px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #011267;
+  outline: none;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+body:has(.publish-btn) form input[type="text"]::placeholder,
+body:has(.publish-btn) form input[type="datetime-local"]::placeholder,
+body:has(.publish-btn) form input[type="number"]::placeholder {
+  color: #9ab5cc;
+  font-weight: 400;
+}
+
+body:has(.publish-btn) form input[type="text"]:focus,
+body:has(.publish-btn) form input[type="datetime-local"]:focus,
+body:has(.publish-btn) form input[type="number"]:focus {
+  border-color: #011267;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(1, 18, 103, 0.10);
+}
+
+/* ── Bouton Publier ── */
+.publish-btn {
+  display: block;
+  width: 100%;
+  margin-top: 28px;
+  padding: 13px;
+  background: #011267;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 14px rgba(1, 18, 103, 0.28);
+}
+
+.publish-btn:hover {
+  background: #021a8c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(1, 18, 103, 0.36);
+}
+
+.publish-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(1, 18, 103, 0.22);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body:has(.publish-btn) h1 {
+    margin: 24px auto 14px;
+    font-size: 1.6rem;
+  }
+
+  body:has(.publish-btn) form {
+    padding: 24px 18px;
+    margin-bottom: 40px;
+  }
+}
