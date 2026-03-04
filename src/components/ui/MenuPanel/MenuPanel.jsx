@@ -2,7 +2,7 @@ import "./MenuPanel.css";
 import MenuLink from "../MenuLink/MenuLink";
 import useAuthStore from '../../../store/authStore';
 
-export default function MenuPanel({ isMenuOpen,isConnected }) {
+export default function MenuPanel({ isMenuOpen,isConnected, logout}) {
   //Menu Visiteur
   const VisitorMenu = [
     { label: "S'inscrire", path: "/register" },
@@ -17,9 +17,9 @@ export default function MenuPanel({ isMenuOpen,isConnected }) {
     { label: "Mon solde", path: "/" },
     { label: "Mon profil", path: "/" },
     { label: "Mes paramètres", path: "/" },
-    { label: "Se déconnecter", path: "/" },
+    { label: "Se déconnecter", path: "/", onClick:logout},
   ];
-
+  
   const VisitorList = VisitorMenu.map((page) => (
     <MenuLink label={page.label} path={page.path} />
   ));
@@ -36,7 +36,6 @@ export default function MenuPanel({ isMenuOpen,isConnected }) {
           alert("Vous avez bien été déconnecté")
         }
       }} />
-  ));
 
   return (
     <ul className={`menu_panel-${isMenuOpen ? "display" : "hidden"}`}>
