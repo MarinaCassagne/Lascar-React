@@ -1,6 +1,6 @@
 import "./MenuPanel.css";
 import MenuLink from "../MenuLink/MenuLink";
-import { useState } from "react";
+import useAuthStore from '../../../store/authStore';
 
 export default function MenuPanel({ isMenuOpen,isConnected }) {
   //Menu Visiteur
@@ -24,8 +24,18 @@ export default function MenuPanel({ isMenuOpen,isConnected }) {
     <MenuLink label={page.label} path={page.path} />
   ));
 
+
+  const {logout} = useAuthStore();
+
   const MemberList = MemberMenu.map((page) => (
-    <MenuLink label={page.label} path={page.path} />
+    <MenuLink label={page.label} path={page.path} onClick={
+      ()=>{
+        if(page.label === "Se déconnecter"){
+          logout();
+          window.location.href = "/";
+          alert("Vous avez bien été déconnecté")
+        }
+      }} />
   ));
 
   return (

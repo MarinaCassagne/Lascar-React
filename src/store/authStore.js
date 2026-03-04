@@ -20,7 +20,7 @@ const useAuthStore = create(
       setUser: (user) => set({ user }),
 
       // Déconnecte l'utilisateur en vidant tout le store
-      logout: () => set({ accessToken: null, refreshToken: null, user: null }),
+      logout: () => localStorage.removeItem("auth-storage"),
     }),
     {
       // Nom de la clé dans le localStorage

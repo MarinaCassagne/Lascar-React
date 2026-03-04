@@ -4,6 +4,7 @@ import HeaderResearch from "../../ui/HeaderResearch/HeaderResearch";
 import MenuIcon from "../../ui/MenuIcon/MenuIcon";
 import MenuPanel from "../MenuPanel/MenuPanel";
 import { useEffect, useState } from "react";
+import useAuthStore from '../../../store/authStore';
 // On importe le store Zustand pour stocker les tokens
 
 export default function Navbar() {
@@ -26,12 +27,14 @@ export default function Navbar() {
     setIsConnected(tokenStorage !== null); 
   }, []);
 
+  const {logout} = useAuthStore();
+
   return (
     <>
       <nav className="navbar">
         <HeaderResearch />
         <MenuIcon isMenuOpen={isMenuOpen} ToggleMenu={ToggleMenu} />
-        <MenuPanel isMenuOpen={isMenuOpen} isConnected={isConnected} />
+        <MenuPanel isMenuOpen={isMenuOpen} isConnected={isConnected} logout={logout}  />
       </nav>
     </>
   );
