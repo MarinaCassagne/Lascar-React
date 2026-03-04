@@ -40,26 +40,26 @@ export default function PublishDriver() {
             <h1>Informations du trajet</h1>
             <form onSubmit={handleSubmit}>
                 <h3>Type de trajet</h3>
-                <input type="radio" id="Domicile Travail" name="type_trajet" value="Domicile Travail" onChange={(e) => setTypeTrajet(e.target.value)}/>
+                <input type="radio" id="Domicile Travail" name="type_trajet" value="Domicile Travail" onChange={(e) => setTypeTrajet(e.target.value)} required/>
                 <label htmlFor="type_trajet">Domicile↔️Travail</label><br />
 
-                <input type="radio" id="Evenement" name="type_trajet" value="Evenement" onChange={(e) => setTypeTrajet(e.target.value)}/>
+                <input type="radio" id="Evenement" name="type_trajet" value="Evenement" onChange={(e) => setTypeTrajet(e.target.value)} required/>
                 <label htmlFor="type_trajet">Evenement (culture/sportif)</label><br/>
 
                 <h3>Adresse de départ</h3>
-                <input type="text" id="AdresseDepart" name="lieu_de_depart" value={adresseDepart} onChange={(e) => setAdresseDepart(e.target.value)}/>
+                <input type="text" id="AdresseDepart" name="lieu_de_depart" value={adresseDepart} onChange={(e) => setAdresseDepart(e.target.value)} required/>
 
                 <h3>Adresse d'arrivée</h3>
-                <input type="text" id="AdresseDepart" name="lieu_arrivee" value={adresseArrivee} onChange={(e) => setAdresseArrivee(e.target.value)}/>
+                <input type="text" id="AdresseDepart" name="lieu_arrivee" value={adresseArrivee} onChange={(e) => setAdresseArrivee(e.target.value)} required/>
 
                 <h3>Date et Heure de départ</h3>
-                <input type="datetime-local" id="dateDepart" name="date_de_depart" value={dateDepart} onChange={(e) => setDateDepart(e.target.value)}/>
+                <input type="datetime-local" id="dateDepart" name="date_de_depart" value={dateDepart} onChange={(e) => setDateDepart(e.target.value)} required/>
 
                 <h3>Nombre de place dans la voiture</h3>
-                <input type="number" id="NombrePlace" name="nombre_de_place" value={nombrePlace} onChange={(e) => setNombrePlace(e.target.value)}/>
+                <input type="number" id="NombrePlace" name="nombre_de_place" value={nombrePlace} onChange={(e) => setNombrePlace(e.target.value)} required/>
 
                 <h3>Prix</h3>
-                <input type="number" step="0.01" id="prix" name="prix" value={prix} onChange={(e) => setPrix(e.target.value)}/>
+                <input type="number" step="0.01" id="prix" name="prix" value={prix} onChange={(e) => setPrix(e.target.value)} required  />
 
                 <button type="submit" className="publish-btn">
                     Publier le trajet
