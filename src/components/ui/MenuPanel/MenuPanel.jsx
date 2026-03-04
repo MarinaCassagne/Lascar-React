@@ -1,8 +1,9 @@
 import "./MenuPanel.css";
 import MenuLink from "../MenuLink/MenuLink";
+
 import { useState } from "react";
 
-export default function MenuPanel({ isMenuOpen,isConnected }) {
+export default function MenuPanel({ isMenuOpen,isConnected, logout}) {
   //Menu Visiteur
   const VisitorMenu = [
     { label: "S'inscrire", path: "/register" },
@@ -17,15 +18,15 @@ export default function MenuPanel({ isMenuOpen,isConnected }) {
     { label: "Mon solde", path: "/" },
     { label: "Mon profil", path: "/" },
     { label: "Mes paramètres", path: "/" },
-    { label: "Se déconnecter", path: "/" },
+    { label: "Se déconnecter", path: "/", onClick:logout},
   ];
-
+  
   const VisitorList = VisitorMenu.map((page) => (
     <MenuLink label={page.label} path={page.path} />
   ));
 
   const MemberList = MemberMenu.map((page) => (
-    <MenuLink label={page.label} path={page.path} />
+    <MenuLink label={page.label} path={page.path} onClick={page.onClick} />
   ));
 
   return (
