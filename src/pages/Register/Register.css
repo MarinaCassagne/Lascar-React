@@ -1,12 +1,13 @@
-.register-wrapper {      
+.register-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap:35px;
+  align-items: flex-start;
+  gap: 35px;
+  padding: 2rem 0;
 }
 
 .register-wrapper img {
   height: 400px;
-  width :auto;
+  width: auto;
   border-radius: 8px;
 }

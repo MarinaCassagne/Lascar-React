@@ -1,17 +1,17 @@
-import { Link, useNavigate } from 'react-router-dom';
-import Header from '../../components/layout/Header/Header';
-import { useState } from 'react';
-import VOITURE from '../../assets/IMG/Voiture.png';
-import Footer from '../../components/layout/Footer/Footer';
-import './Login.css';
+import { Link, useNavigate } from "react-router-dom";
+import Header from "../../components/layout/Header/Header";
+import { useState } from "react";
+import VOITURE from "../../assets/IMG/Voiture.png";
+import Footer from "../../components/layout/Footer/Footer";
+import "./Login.css";
 // On importe notre instance Axios centralisée
-import api from '../../api/axiosInstance';
+import api from "../../api/axiosInstance";
 // On importe le store Zustand pour stocker les tokens
-import useAuthStore from '../../store/authStore';
+import useAuthStore from "../../store/authStore";
 
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   // On récupère les fonctions du store Zustand
@@ -20,22 +20,21 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
-      const {data} = await api.post('/api/login',{
+      const { data } = await api.post("/api/login", {
         email: email,
         mot_de_passe: password,
       });
 
-      console.log('Data reçue:', data);
+      console.log("Data reçue:", data);
       // On stocke les tokens dans Zustand
       setTokens(data.token, data.refresh_token);
 
       // On stocke les infos utilisateur dans Zustand
       setUser(data.user);
 
-      navigate('/');
+      navigate("/");
     } catch (error) {
-      console.error('Erreur réseau:', error);
+      console.error("Erreur réseau:", error);
     }
   };
 
@@ -43,7 +42,6 @@ export default function Login() {
     <>
       <Header />
       <div className="login-wrapper">
-
         {/* Image à gauche */}
         <div className="login-illustration">
           <img src={VOITURE} alt="Voiture LAS'CAR" />
@@ -87,7 +85,6 @@ export default function Login() {
             </button>
           </form>
         </div>
-
       </div>
 
       <Footer />
