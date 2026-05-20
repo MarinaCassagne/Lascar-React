@@ -21,14 +21,14 @@ export default function MenuPanel({ isMenuOpen,isConnected}) {
   ];
   
   const VisitorList = VisitorMenu.map((page) => (
-    <MenuLink label={page.label} path={page.path} />
+    <MenuLink key={page.path} label={page.label} path={page.path} />
   ));
 
 
   const {logout} = useAuthStore();
 
   const MemberList = MemberMenu.map((page) => (
-    <MenuLink label={page.label} path={page.path} onClick={
+    <MenuLink key={page.label} label={page.label} path={page.path} onClick={
       ()=>{
         if(page.label === "Se déconnecter"){
           logout();

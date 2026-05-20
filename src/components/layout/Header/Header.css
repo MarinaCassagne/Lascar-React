@@ -10,3 +10,8 @@ header {
   top: 0px;
   z-index: 100;
 }
+
+.logo {
+  width: 30%;
+  margin: 0 auto 0 0;
+}
