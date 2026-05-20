@@ -2,9 +2,8 @@
   background-color: #a9e1ff;
   padding: 1rem 2rem;
   border-top: 1px solid #a9e1ff;
-  position: sticky;
-  bottom: 0px;
   width: 100%;
+  margin-top: auto;
 }
 
 .footer-content {
